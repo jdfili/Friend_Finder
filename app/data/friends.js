@@ -1,7 +1,8 @@
 var tableArray = [
     {
         name: "jd",
-        age: 23
+        image: "sfsdfds",
+        score: []
     }
 ];
 
