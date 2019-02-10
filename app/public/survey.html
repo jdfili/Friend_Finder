@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -18,24 +21,64 @@
         crossorigin="anonymous"></script>
     <script src="../../server.js"></script>
 </head>
+<style>
+    body {
+        background: rgb(26, 29, 32);
+        background-image: url("https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: 	rgb(255,255,242);
+        font-family: 'Staatliches', cursive;
+    }
 
+    .jumbotron {
+        background-color: rgb(26, 29, 32, 0);
+    }
+
+    .container {
+        background: none;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    footer {
+        color: white;
+    }
+    .btn {
+        background: rgb(26, 29, 32);
+        color: whitesmoke;
+    }
+    select {
+        background: rgb(36,41,46);
+        color: rgb(255,255,242);
+    }
+    .survey {
+        color: rgb(26, 29, 32);
+    }
+    .modal-content {
+        background: rgb(26, 29, 32);
+    }
+  
+</style>
 
 <body>
-    <div class="container">
-        <h3>Survey</h3>
+    <div class="container rounded mt-4 mb-4">
+        <h3><i class="fas fa-poll-h mr-2"></i>Survey</h3>
         <hr>
         <p>Name (required)</p>
-        <input type="text" id="name" class="form-control">
+        <input type="text" id="name" class="form-control"><br>
         <p>Image (required)</p>
         <input type="text" id="image" class="form-control">
         <hr>
-        <div class="survey">
+        <div class="survey rounded p-4">
             <strong>
                 <p1>Question 1:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, optio.</p>
+                <p>You most always prefer to listen to music while doing daily tasks</p>
             </strong>
             <p></p>
-            <select id="q1">
+            <select id="q1" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -44,10 +87,10 @@
             </select> <br><br>
             <strong>
                 <p1>Question 2:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>Whether or not you know the lyrics doesn't prevent you from singing along</p>
             </strong>
             <p></p>
-            <select id="q2">
+            <select id="q2" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -56,10 +99,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 3:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>You find it difficult to only listen to one genre of music for long periods of time</p>
             </strong>
             <p></p>
-            <select id="q3">
+            <select id="q3" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -68,10 +111,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 4:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>You'd rather be in the mosh-pit than in the back of the venue</p>
             </strong>
             <p></p>
-            <select id="q4">
+            <select id="q4" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -80,10 +123,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 5:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>You prefer hype-music over chill-music on your commutes</p>
             </strong>
             <p></p>
-            <select id="q5">
+            <select id="q5" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -92,10 +135,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 6:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>"Florida Georgia Line" is a respectable band</p>
             </strong>
             <p></p>
-            <select id="q6">
+            <select id="q6" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -104,10 +147,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 7:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>Mumble rap is an acceptable form of music</p>
             </strong>
             <p></p>
-            <select id="q7">
+            <select id="q7" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -116,10 +159,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 8:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>You prefer oldies to modern music</p>
             </strong>
             <p></p>
-            <select id=q8>
+            <select id="q8" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -128,10 +171,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 9:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>You find it as easy to listen to Death Metal as Classical music</p>
             </strong>
             <p></p>
-            <select id="q9">
+            <select id="q9" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -140,10 +183,10 @@
             </select><br><br>
             <strong>
                 <p1>Question 10:</p1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quas?</p>
+                <p>East coast > West coast</p>
             </strong>
             <p></p>
-            <select id="q10">
+            <select id="q10" class="rounded">
                 <option value="1">Strongly Disagree</option>
                 <option value="2">Disagree</option>
                 <option value="3">Neutral</option>
@@ -151,13 +194,13 @@
                 <option value="5">Strongly Agree</option>
             </select><br><br>
 
+            <button class="btn mb-2" id="post" type="submit" data-toggle="modal" data-target="#match-modal">Submit</button>
         </div>
-        <button class="btn btn-primary mb-2" id="post" type="submit" data-toggle="modal" data-target="#match-modal">Submit</button>
 
         <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content text-center">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -165,7 +208,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -175,6 +218,10 @@
         </div>
 
     </div>
+    <footer class="ml-4">
+        <a href="/api/friends" class=" ml-4 mr-2 pl-4">Api Friends List</a> | <a href="https://github.com/jdfili/Friend_Finder" class="ml-2 mr-2">Github
+            Repo</a> | <a href="/" class="ml-2">Home</a>
+    </footer>
 
 </body>
 

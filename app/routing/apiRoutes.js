@@ -25,6 +25,7 @@ module.exports = function (app) {
                 }
             }
         }
+        tableData.push(req.body);
         res.json(match);
     });
 

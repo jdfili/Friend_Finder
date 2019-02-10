@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -15,20 +18,48 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 </head>
+<style>
+    body {
+        background: rgb(26, 29, 32);
+        background-image: url("https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-position: center;
+        background-size: cover;
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+
+    .jumbotron {
+        background-color: rgb(26, 29, 32, 0);
+    }
+
+    .container {
+        background: rgb(68, 14, 107);
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    footer {
+        color: white;
+    }
+    .btn {
+        background: rgb(26, 29, 32);
+        color: whitesmoke;
+    }
+  
+</style>
 
 <body>
     <div class="containter ml-4 mr-4">
-        <div class="jumbotron">
-            <h1>Friend Finder</h1>
+        <div class="jumbotron mt-4">
+            <h1><i class="fas fa-user-friends mr-2"></i>Friend Finder</h1>
             <hr>
             <h3>Take the survey and find your best friend today!</h3> <br><br>
-            <a href="/survey"><button class="btn btn-primary">Take Survey</button></a>
+            <a href="/survey"><button class="btn">Take Survey</button></a>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <a href="/">Api Friends List</a> <a href="/">Github repo</a>
-        </div>
+    <footer class="ml-4">
+        <a href="/api/friends" class=" ml-4 mr-2">Api Friends List</a> | <a href="https://github.com/jdfili/Friend_Finder" class="ml-2">Github Repo</a>
     </footer>
 </body>
 
