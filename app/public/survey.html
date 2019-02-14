@@ -197,7 +197,7 @@
                 <option value="5">Strongly Agree</option>
             </select><br><br>
 
-            <button class="btn mb-2" id="post" type="submit" data-toggle="modal" data-target="#match-modal">Submit</button>
+            <button class="btn mb-2" id="post" type="submit" data-target="#match-modal">Submit</button>
         </div>
 
         <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -222,7 +222,8 @@
 
     </div>
     <footer class="ml-4">
-        <a href="/api/friends" class=" ml-4 mr-2 pl-4">Api Friends List</a> | <a href="https://github.com/jdfili/Friend_Finder" class="ml-2 mr-2">Github
+        <a href="/api/friends" class=" ml-4 mr-2 pl-4">Api Friends List</a> | <a href="https://github.com/jdfili/Friend_Finder"
+            class="ml-2 mr-2">Github
             Repo</a> | <a href="/" class="ml-2">Home</a>
     </footer>
 
@@ -233,6 +234,7 @@
 
     $("#post").on("click", function () {
         event.preventDefault();
+        var isValid = true;
         var newUser = {
             name: $("#name").val().trim(),
             image: $("#image").val().trim(),
@@ -249,13 +251,20 @@
                 $('#q10').val()
             ]
         };
-
-        $.post("/api/friends", newUser, function (data) {
-            $(".modal-title").text("You matched with " + data.name + "!");
-            var img = $("<img>");
-            img.attr("src", data.photo)
-            $(".modal-body").append(img);
-        });
-
+        if ($("#name").val() === "" || $("#image").val() === "") {
+            isValid = false;
+            alert("Please fill out required info")
+        }
+        if (isValid) {
+            
+            $.post("/api/friends", newUser, function (data) {
+                $(".modal-title").text("You matched with " + data.name + "!");
+                var img = $("<img>");
+                img.attr("src", data.photo);
+                img.addClass("rounded");
+                $(".modal-body").append(img);
+            });
+            $("#post").attr('data-toggle', 'modal')
+        };
     })
 </script>
